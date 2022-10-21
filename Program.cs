@@ -101,9 +101,11 @@ namespace QuickSort
             //sort the list on the left of pivot using quick sort
             q_sort(low, j - 1);
 
-            
-
+            //sort the list on the right of pivot using quick sort
+            q_sort(j + 1, high);
         }
+
+
 
     }
 }
