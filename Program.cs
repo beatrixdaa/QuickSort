@@ -16,7 +16,6 @@ namespace QuickSort
         private int n;
 
 
-
         void input()
         {
             while (true)
@@ -56,6 +55,33 @@ namespace QuickSort
             int pivot, i, j;
             if (low > high)
                 return;
+
+            //Partition the list into two parts;
+            //One containing elements less that or equal to pivot
+            //Outher containning elements greather than pivot
+
+            i = low + 1;
+            j = high;
+
+            pivot = arr[low];
+
+            while( i <= j)
+            {
+                //Search for element greater than pivot
+                while ((arr[i] <= pivot) && (i <= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+
+
+
+
+
+
+
+
         }
 
     }
