@@ -98,7 +98,10 @@ namespace QuickSort
                 swap(low, j);
                 mov_count++;
             }
+            //sort the list on the left of pivot using quick sort
+            q_sort(low, j - 1);
 
+            
 
         }
 
