@@ -65,7 +65,7 @@ namespace QuickSort
 
             pivot = arr[low];
 
-            while( i <= j)
+            while (i <= j)
             {
                 //Search for element greater than pivot
                 while ((arr[i] <= pivot) && (i <= high))
@@ -75,11 +75,29 @@ namespace QuickSort
                 }
                 cmp_count++;
 
+                //Search for an elements less than or equal to pivot
+                while ((arr[j] > pivot) && (j >= low))
+                {
+                    j--;
+                    cmp_count--;
+                }
+                cmp_count++;
 
+                if (i < j) //if the greater elements is on the left of the element
+                {
+                    //swap the element at index i whit the element at index j
+                    swap(i, j);
+                    mov_count++;
+                }
+            }
+            //j now contains the index of the last element in the sorted list
 
-
-
-
+            if (low < j)
+            {
+                //Move the pivot to its correct position in the list
+                swap(low, j);
+                mov_count++;
+            }
 
 
         }
